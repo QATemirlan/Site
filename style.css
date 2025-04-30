@@ -1,0 +1,151 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Общий стиль карточек */
+.card {
+  background-color: #1f1f1f;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Аватар и текст */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile-text h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.subtitle {
+  margin-top: 5px;
+  font-size: 1em;
+  color: #aaaaaa;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.list li {
+  margin: 8px 0;
+  font-size: 1em;
+}
+
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Кнопка */
+.button-card {
+  padding: 0;
+}
+
+.button-link {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 1.2em;
+  color: #ffffff;
+  background-color: #1e90ff;
+  border-radius: 16px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.button-link:hover {
+  background-color: #1c7ed6;
+}
+
+/* Модальное окно — затемнённый фон с blur */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(18, 18, 18, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+/* Само окно */
+.modal-window {
+  background-color: #1f1f1f;
+  padding: 20px 30px;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  font-size: 1.1em;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* Кнопка закрытия */
+.close-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #1c7ed6;
+}
+
+/* Скрытое состояние */
+.hidden {
+  display: none;
+}
+
+/* Активное состояние модалки */
+.modal-overlay.active .modal-window {
+  transform: scale(1);
+  opacity: 1;
+}
